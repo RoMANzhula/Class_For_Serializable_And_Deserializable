@@ -1,1 +1,1 @@
-# Class_For_Serializable_And_Deserializable
+Сериализовать и десереализовать обьекты из произвольного созданного типа.

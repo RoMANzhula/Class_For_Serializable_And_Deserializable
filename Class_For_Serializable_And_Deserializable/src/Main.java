@@ -6,6 +6,6 @@ public class Main {
         classForSerializable.methodSerializable(); //вызываем методСериализации для ссыл.переменной на обьект
 
         ClassForDeserializable classForDeserializable = new ClassForDeserializable();//создаем новый обьект класса КлассДляДесериализации
-        classForDeserializable.methodDeserializable();//вызываем методСериализации для ссыл.переменной на обьект
+        classForDeserializable.methodDeserializable();//вызываем методДесериализации для ссыл.переменной на обьект
     }
 }

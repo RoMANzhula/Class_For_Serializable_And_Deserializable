@@ -2,10 +2,10 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ClassForSerializable classForSerializable = new ClassForSerializable(); //создаем новый обьект класса КлассДляСериализации
-        classForSerializable.methodSerializable(); //вызываем методСериализации для ссыл.переменной на обьект
+        ClassForSerializable classForSerializable = new ClassForSerializable(); // створюємо новий об'єкт класу ClassForSerializable
+        classForSerializable.methodSerializable(); // викликаємо метод методSerializable для змінної-лінка на об'єкт
 
-        ClassForDeserializable classForDeserializable = new ClassForDeserializable();//создаем новый обьект класса КлассДляДесериализации
-        classForDeserializable.methodDeserializable();//вызываем методДесериализации для ссыл.переменной на обьект
+        ClassForDeserializable classForDeserializable = new ClassForDeserializable(); // створюємо новий об'єкт класу ClassForDeserializable
+        classForDeserializable.methodDeserializable(); // викликаємо метод методDeserializable для змінної-лінка на об'єкт
     }
 }

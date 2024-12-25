@@ -2,48 +2,48 @@ import java.io.Serializable;
 import java.util.Arrays;
 
 public class SavedCompanyInfo implements Serializable {
-    private static final long serialVersionUID = 1L; //уникальный идентификатор версии сериализованного класса,
-    //который имплементирует интерфейс Serializable
+    private static final long serialVersionUID = 1L; // унікальний ідентифікатор версії серіалізованого класу,
+    // який імплементує інтерфейс Serializable
 
-    private String[] territoriesInfo; //приватное поле класса типа массив строк, кот.содержит инфо об
-    // количистве и расположении филиалов компании
-    private String[] resourcesInfo; //приватное поле класса типа массив строк, кот.содержит инфо об
-    // количистве финансов по регионам
-    private String[] totalSummaInfo; //приватное поле класса типа массив строк, кот.содержит инфо об
-    // общей сумме дохода
+    private String[] territoriesInfo; // приватне поле класу типу масив рядків, яке містить інформацію про
+    // кількість і розташування філій компанії
+    private String[] resourcesInfo; // приватне поле класу типу масив рядків, яке містить інформацію про
+    // кількість фінансів по регіонах
+    private String[] totalSummaInfo; // приватне поле класу типу масив рядків, яке містить інформацію про
+    // загальну суму доходу
 
-    public SavedCompanyInfo(String[] territoriesInfo, String[] resourcesInfo, String[] totalSummaInfo) { //конструктор класса
-        this.territoriesInfo = territoriesInfo; //инициализация полей класса
+    public SavedCompanyInfo(String[] territoriesInfo, String[] resourcesInfo, String[] totalSummaInfo) { // конструктор класу
+        this.territoriesInfo = territoriesInfo; // ініціалізація полів класу
         this.resourcesInfo = resourcesInfo;
         this.totalSummaInfo = totalSummaInfo;
     }
 
-    public String[] getTerritoriesInfo() { //геттер
+    public String[] getTerritoriesInfo() { // геттер
         return territoriesInfo;
     }
 
-    public void setTerritoriesInfo(String[] territoriesInfo) { //сеттер
+    public void setTerritoriesInfo(String[] territoriesInfo) { // сетер
         this.territoriesInfo = territoriesInfo;
     }
 
-    public String[] getResourcesInfo() { //геттер
+    public String[] getResourcesInfo() { // геттер
         return resourcesInfo;
     }
 
-    public void setResourcesInfo(String[] resourcesInfo) { //сеттер
+    public void setResourcesInfo(String[] resourcesInfo) { // сетер
         this.resourcesInfo = resourcesInfo;
     }
 
-    public String[] getDiplomacyInfo() { //геттер
+    public String[] getDiplomacyInfo() { // геттер
         return totalSummaInfo;
     }
 
-    public void setDiplomacyInfo(String[] diplomacyInfo) { //сеттер
+    public void setDiplomacyInfo(String[] diplomacyInfo) { // сетер
         this.totalSummaInfo = diplomacyInfo;
     }
 
-    @Override //аннатация - переопределить
-    public String toString() { //метод к строковому виду
+    @Override // анотація - переозначити
+    public String toString() { // метод для перетворення в строковий вигляд
         return "SavedCompanyInfo{" +
                 "territoriesInfo=" + Arrays.toString(territoriesInfo) +
                 ", resourcesInfo=" + Arrays.toString(resourcesInfo) +

@@ -2,21 +2,19 @@ import java.io.*;
 
 public class ClassForSerializable implements Serializable {
     public void methodSerializable() throws IOException {
-        String[] territoryInfo = {"Kiev has 6 fabrics.", "Lvov has 4 fabrics.", "Odessa has 5 fabrics."};
-        String[] moneyInfo = {"Kiev has 6 million dollars.", "Lvov has 4 million dollars.", "Odessa has 5 million dollars."};
-        String[] totalSummaInfo = {"Total summa money from two month is 30 million dollars"};
+        String[] territoryInfo = {"Київ має 6 фабрик.", "Львів має 4 фабрики.", "Одеса має 5 фабрик."};
+        String[] moneyInfo = {"Київ має 6 мільйонів доларів.", "Львів має 4 мільйони доларів.", "Одеса має 5 мільйонів доларів."};
+        String[] totalSummaInfo = {"Загальна сума грошей за два місяці становить 30 мільйонів доларів"};
 
-        SavedCompanyInfo savedCompanyInfo = new SavedCompanyInfo(territoryInfo, moneyInfo, totalSummaInfo);//создаем новый обьект
-        //класса СохраненнаяИнформацияКомпании и заполняем конструктор аргументами
+        SavedCompanyInfo savedCompanyInfo = new SavedCompanyInfo(territoryInfo, moneyInfo, totalSummaInfo); // створюємо новий об'єкт
+        // класу SavedCompanyInfo та заповнюємо конструктор аргументами
 
-        FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\User\\Desktop\\save.ser.txt"); //создаем поток
-        //для записи данных в указанный файл
+        FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\User\\Desktop\\save.ser.txt"); // створюємо потік
+        // для запису даних у вказаний файл
 
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream); //создаем поток для сериализации обьекта
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream); // створюємо потік для серіалізації об'єкта
 
-        objectOutputStream.writeObject(savedCompanyInfo); //сохраняем информацию про компании в файл
-        objectOutputStream.close(); //закрываем поток и освобождаем ресурсы
-
-
+        objectOutputStream.writeObject(savedCompanyInfo); // зберігаємо інформацію про компанії у файл
+        objectOutputStream.close(); // закриваємо потік та звільняємо ресурси
     }
 }

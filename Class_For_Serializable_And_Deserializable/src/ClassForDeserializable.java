@@ -6,13 +6,13 @@ import java.io.Serializable;
 public class ClassForDeserializable implements Serializable {
     public void methodDeserializable() throws IOException, ClassNotFoundException {
 
-        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\User\\Desktop\\save.ser.txt"); //создаем поток для
-        //чтения данных из файла
+        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\User\\Desktop\\save.ser.txt"); // створюємо потік для
+        // читання даних з файлу
 
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream); //создаем поток для десериализации обьекта
+        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream); // створюємо потік для десеріалізації об'єкта
 
-        SavedCompanyInfo savedCompanyInfo = (SavedCompanyInfo) objectInputStream.readObject(); //загружаем обьект
+        SavedCompanyInfo savedCompanyInfo = (SavedCompanyInfo) objectInputStream.readObject(); // завантажуємо об'єкт
 
-        System.out.println(savedCompanyInfo); //выводим на консоль сохраненную информацию
+        System.out.println(savedCompanyInfo); // виводимо на консоль збережену інформацію
     }
 }
